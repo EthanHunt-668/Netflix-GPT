@@ -1,0 +1,69 @@
+
+.BgImg{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    z-index: -1;
+    width: 100%;
+    filter: brightness(70%);
+}
+.form{
+    width: 70%;
+    margin:auto;
+    background-color: rgba(0, 0, 0, 0.726);
+    border-radius: 5px;
+    padding:45px;
+    color: white;
+}
+.inputText{
+    width: 100%;
+    margin:10px 0px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+input{
+    background-color: lightgray;
+}
+
+button{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.667);
+    color: white;
+    padding: 5px;
+    margin-top: 20px;
+}
+.cbContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.Help{
+    color: lightgray;
+}
+.msg{
+    font-size: small;
+    color: lightgray;
+}
+.SignUp{
+    font-weight: 500;
+color: white;
+}
+.botMsg{
+    font-size: small;
+    color: lightgray;
+}
+label{
+    font-size: small;
+    color: lightgray;
+}
+.errMsg{
+    font-size: small   ;
+    color: red;
+}

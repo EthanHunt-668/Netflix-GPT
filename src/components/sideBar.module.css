@@ -1,0 +1,15 @@
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(216 232 212);
+}
+.idInfo{
+    color: rgb(129, 75, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

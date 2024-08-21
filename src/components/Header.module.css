@@ -1,0 +1,14 @@
+.Header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftButtons{
+    display: flex;
+    justify-content: space-between;
+}
+.ProjectLogo{
+    width: 200px;
+}
