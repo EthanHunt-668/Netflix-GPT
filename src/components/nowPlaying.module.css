@@ -1,0 +1,7 @@
+.mainVideo{
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(80%);
+}

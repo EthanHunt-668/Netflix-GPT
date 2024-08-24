@@ -4,6 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: linear-gradient(black,rgba(0, 0, 0, 0.059));
+    position: absolute;
 }
 .leftButtons{
     display: flex;
@@ -11,4 +13,9 @@
 }
 .ProjectLogo{
     width: 200px;
+}
+.sOut{
+    cursor: pointer;
+    color: white;
+    padding: 5px;
 }

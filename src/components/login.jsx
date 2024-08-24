@@ -1,13 +1,15 @@
 import { useRef, useState } from "react";
 import css from "./login.module.css";
 import { FormValidation } from "../Utils/formValidation";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
 import { auth } from "../Utils/firebase";
+import { BG_IMG } from "../Utils/CONSTANTS";
 
 const Login = () => {
-
-   
-
   const [isSignIn, setIsSignIn] = useState(true);
   const toggleSignIn = () => {
     setIsSignIn(!isSignIn);
@@ -17,9 +19,9 @@ const Login = () => {
 
   const email = useRef(null);
   const password = useRef(null);
+  const userName = useRef(null);
 
   const handleClick = () => {
-    
     const Msg = FormValidation(email.current.value, password.current.value);
     setErrMsg(Msg);
 
@@ -29,14 +31,14 @@ const Login = () => {
       createUserWithEmailAndPassword(
         auth,
         email.current.value,
-        password.current.value
+        password.current.value,
       )
         .then((userCredential) => {
-          // Signed up
           const user = userCredential.user;
           console.log(user);
-          // ...
+          updateProfile(user,{displayName:userName.current.value})
         })
+        .then()
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
@@ -51,7 +53,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -65,7 +66,7 @@ const Login = () => {
     <div className={css.body}>
       <img
         className={css.BgImg}
-        src="https://assets.nflxext.com/ffe/siteui/vlv3/20bf1f4d-1c73-48fd-8689-310d6dd80efc/81bdc063-cb8f-4afe-8a02-a3131ca4ef5e/IN-en-20240812-POP_SIGNUP_TWO_WEEKS-perspective_WEB_7998f3b6-63e3-424a-8328-550cf777ddce_medium.jpg"
+        src={BG_IMG}
         alt="Background"
       />
 
@@ -78,6 +79,7 @@ const Login = () => {
         <h2>{isSignIn ? `Sign In` : `Sign Up`}</h2>
         {!isSignIn && (
           <input
+            ref={userName}
             className={`${css.inputText}`}
             type="text"
             placeholder="Enter your Name"
