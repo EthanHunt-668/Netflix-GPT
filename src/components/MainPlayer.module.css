@@ -1,7 +1,40 @@
 .movieTitleContainer{
-    border: white solid 1px;
     color: white;
-    width: 80vh;
+    width: 70vh;
     padding: 5px;
-    margin-top: 40vh;
-    position: absolute;}
+    margin-top: 25vh;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 2;
+}
+.title{
+    font: bold;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    width: 20vh;
+    border-radius: 5px;
+    background-color: gray;
+    margin-right: 50px;
+}
+button:hover{
+    background-color: lightgray;
+}
+p{
+    text-justify:newspaper;
+    line-height: 18px;
+    font-size: 15px;
+    line-clamp: 4;
+    width: 50vh;
+
+    display: -webkit-box;
+   -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}

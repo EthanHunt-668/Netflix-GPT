@@ -1,0 +1,10 @@
+.posterContainer{
+    display: flex;
+z-index: -1;
+overflow-x:scroll;
+scrollbar-width: none;
+}
+.Poster{
+    width: 100px;
+    padding: 5px;
+}

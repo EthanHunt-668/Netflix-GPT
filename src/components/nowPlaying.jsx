@@ -23,9 +23,9 @@ const NowPlaying = ({ id }) => {
   useEffect(() => {
     video();
   }, []);
-  return (<div className={css.videoContainer}>
+  return (<div className="bg-black">
     <iframe className={css.mainVideo}
-      src={`https://www.youtube.com/embed/${key}?autoplay=1&mute=1`}
+      src={`https://www.youtube.com/embed/${key}?loop=1&autoplay=1&mute=1&disablekb=1&controls=0`}
       title="YouTube video player"
       allow="autoplay"
     ></iframe></div>

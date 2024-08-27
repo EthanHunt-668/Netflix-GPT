@@ -1,0 +1,8 @@
+.outerDiv{
+    background-color: black;
+}
+.innerDiv{
+    margin-top: -12em;
+    position: relative;
+    padding: 15px;
+} 

@@ -14,10 +14,10 @@ const {original_title,overview,id}=movie[0];
     return (<>
         <div className={css.movieTitleContainer}>
             <div>
-                <h2>Now Playing: {original_title}</h2>
+                <h2 className={css.title}>{original_title}</h2>
                 <p>{overview}</p>
             </div>
-            <div>
+            <div className={css.buttonContainer}>
                 <button>Play</button>
                 <button>More info</button>
             </div>
