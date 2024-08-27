@@ -4,6 +4,7 @@ import Error from "./components/Error.jsx";
 import Body from "./components/body.jsx";
 import App from "./App.jsx";
 import Browse from "./components/browse.jsx";
+import TrailerPlayer from "./components/TrailerPlayer.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "/Browse",
         element: <Browse />,
       },
+      {
+        path:"/Trailer",
+        element:<TrailerPlayer/>,
+      }
     ],
     errorElement: <Error />,
   },
